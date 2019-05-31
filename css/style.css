@@ -483,6 +483,7 @@ section {
 .extended {
     font-size: 20px;
     color: #fff;
+    text-decoration: none;
     background: none;
     border: none;
     transition: .2s;

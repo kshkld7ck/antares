@@ -27,6 +27,29 @@ $(document).ready(function() {
         });
     });
 
+    $('.nav-container__item-logo').click(function() {
+        // window.open('../', '_blank');
+        console.log($(this).hasClass('main__logo'))
+        if ($(this).hasClass('main__logo')) {
+            console.log('da')
+        } else {
+            window.open('../', '_blank');
+
+        }
+    })
+
+    $('.buy').click(function() {
+        let elementClick = $('#get_order')
+        var destination = $(elementClick).offset().top - 100;
+        jQuery("html:not(:animated),body:not(:animated)").animate({
+            scrollTop: destination
+        }, 800);
+        let name = $(this).parent().parent().parent().find('h4').text().trim();
+        console.log(name)
+        $('.selected-item').text(name)
+    })
+
+
 
     $('.services__options button').click(function() {
         $('.services__options button').removeClass('active');
