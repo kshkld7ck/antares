@@ -46,7 +46,7 @@ $(document).ready(function() {
         menuItems = topMenu.find("a");
         scrollItems = menuItems.map(function() {
             var item = $($(this).attr("href"));
-            console.log(item)
+            // console.log(item)
 
             if (item.length) { return item; }
         });
