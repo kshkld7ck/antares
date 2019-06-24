@@ -58,7 +58,7 @@ $(document).ready(function() {
         let option = $(this).attr('data-option');
         let background = $(this).attr('data-background');
         $('.' + option).css('display', 'flex');
-        $('.services__description').css('background', "url('./images/" + background + "'");
+        $('.services__description').css('background', "url('./images/" + background + "'").css('background-repeat', 'no-repeat').css('background-size', 'cover');
     })
 
 
