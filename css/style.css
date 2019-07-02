@@ -124,7 +124,7 @@ nav {
 }
 
 .nav-container__item:first-child {
-    margin-right: 50px;
+    /* margin-right: 50px; */
 }
 
 nav.sticky {
@@ -729,25 +729,58 @@ textarea {
     position: absolute;
     height: 100%;
     background: rgba(0, 0, 0, .7);
-    width: 285px;
+    width: 100%;
     top: 0;
-    left: 20%;
+    left: 00%;
     display: flex;
+    text-align: center;
     flex-direction: column;
     justify-content: center;
     color: #fff;
     padding: 0 20px;
+    transition: .6s;
+}
+
+.contacts-block p .arrow_down {
+    width: 15px;
+}
+
+.contacts-block.checked-block {
+    transition: .6s;
+    text-align: left;
+    width: 285px;
+    left: 20%;
 }
 
 .contacts-block h6 {
     font-size: 28px;
+    margin-bottom: 10px;
+    justify-content: center;
     display: flex;
     flex-direction: row;
     align-items: center;
 }
 
+.contacts-block.checked-block h6 {
+    justify-content: flex-start
+}
+
 .contacts-block p a {
     color: #fff;
+}
+
+.adres {
+    cursor: pointer;
+    transition: .3s;
+}
+
+.adres img {
+    transition: .3s;
+}
+
+.adres:hover img {
+    margin-bottom: -4px;
+    transition: .3s;
 }
 
 .contacts-block img {
@@ -1044,4 +1077,12 @@ textarea {
 
 h6 a {
     color: #fff;
+}
+
+iframe {
+    display: none;
+}
+
+#contacts {
+    min-height: 700px;
 }

@@ -49,7 +49,13 @@ $(document).ready(function() {
         $('.selected-item').text(name)
     })
 
-
+    $('.adres').click(function() {
+        let attr = $(this).attr('data-target');
+        $('.contacts-block').addClass('checked-block')
+        $('.choose').hide();
+        $('iframe').hide()
+        $('iframe.' + attr + '').show();
+    })
 
     $('.services__options button').click(function() {
         $('.services__options button').removeClass('active');
@@ -66,7 +72,7 @@ $(document).ready(function() {
     $(window).on('scroll', function() {
         var topMenu = $("nav ul");
         topMenuHeight = topMenu.outerHeight();
-        menuItems = topMenu.find("a");
+        menuItems = topMenu.find("a.scrollto");
         scrollItems = menuItems.map(function() {
             var item = $($(this).attr("href"));
             // console.log(item)
